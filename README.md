@@ -191,13 +191,13 @@ uv run python data/scripts/ingest_rag.py --active-only
 
 ---
 
-## 강의 노트 
+## 강의 노트
 - 1강 핵심 목표 : StartCode의 핵심 구조 이해
 
 
-### TODO - 1강 
+### TODO - 1강
 - [v] 환경 세팅
-    - [v] Code Class Live Share 익스텐션 설치 
+    - [v] Code Class Live Share 익스텐션 설치
         - [v] 화면 공유 테스트
     - [v] 가상 환경 생성
         - uv sync --all-extras
@@ -205,18 +205,18 @@ uv run python data/scripts/ingest_rag.py --active-only
     - [v] Supabase 설정
         - [v] 프로젝트에 data/supabase_schema.sql 실행
         - [v] 스케줄 데이터 저장
-            - uv run python data/scripts/ingest_data.py 
+            - uv run python data/scripts/ingest_data.py
         - [v] RAG 데이터 저장
             - uv run python data/scripts/ingest_rag.py
-    - [v] 프로젝트 실행 
+    - [v] 프로젝트 실행
         - uv run uvicorn app.main:app --reload
-    
-- [v] StartCode 구조 이해 
-    - [v] 1강 핵심 코드 이해 
-        ├── app/                  
+
+- [v] StartCode 구조 이해
+    - [v] 1강 핵심 코드 이해
+        ├── app/
         ├── [v] main.py                # FastAPI 진입점 (앱 생성·미들웨어·라우터 등록)
         ├── core/
-        │   └── [v] config.py          # 환경변수 설정 
+        │   └── [v] config.py          # 환경변수 설정
         ├── schemas/
             └── [v] chat.py            # 채팅 요청/응답 스키마
     - [v] 기타 코드
@@ -244,7 +244,7 @@ app/
 │   ├── nodes.py           ← 노드 구현
 │   ├── edges.py           ← 라우팅 로직
 │   └── graph.py           ← 그래프 조립 + 싱글톤
-├── repositories/          ← DB 접근 계층 
+├── repositories/          ← DB 접근 계층
 │   ├── rag.py             ← RAG 검색 (Supabase pgvector)
 │   ├── schedule.py        ← 스케줄 조회
 │   └── fan_letter.py      ← 팬레터 저장
